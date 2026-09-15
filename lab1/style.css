@@ -1,0 +1,52 @@
+* {
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 333; 
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 29px;
+    font-weight: 470;
+}
+
+nav {
+    margin: 1px 3px 1px 3px;
+    padding: 3px;
+}
+
+nav a{
+    color:#000;
+    margin: 5px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+nav a:hover {
+    color: pink;
+}
+
+img {
+    width: 680px;
+    height: 480px;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 7px;
+    border: 1px solid #000;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+}
