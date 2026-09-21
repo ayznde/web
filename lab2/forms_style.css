@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    width: auto;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F8b%2Ff7%2F2a%2F8bf72a588566e24846be0d9264c9cae7.jpg&f=1&nofb=1&ipt=bcb57006a5068769ba691029681f76afa03d0661d824067ecbbac7bc26eb5393https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.v0ERUFxjX-ZmZfGYNq7SvwHaEK%3Fr%3D0%26pid%3DApi&f=1&ipt=59516217fc4dff8a97e34bfbc07126e4bf29b42219fc4cb5f6f25ff1bbd1480a&ipo=images) center / cover fixed no-repeat;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.email {
+    margin: 20px 0;
+}
+
+.fullName
+    {
+    margin: 20px 0;
+
+}
+.label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+}
+
+textarea {
+    padding: 8px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+}
+
+.auth {
+    /* background-color: rgba(29, 49, 59, 0.719); */
+    color: rgb(234, 239, 246);
+    height: 26vh;
+    display: grid;
+    place-items: center;
+}
+
+.feedback {
+    color: rgb(234, 239, 246);
+}

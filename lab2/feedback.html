@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="forms_style.css">
+        <title>Form</title>
+    </head>
+    <body>
+        <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+            <div class="feedback">
+                <h1>Форма обратной связи</h1>
+                <div class = "fullname">
+                    <label class="label" for="fullname">ФИО:</label>
+                    <input id="fullname" type="text" name="fullname">
+                </div>
+                <div class = "email">
+                    <label class="label" for="email">Введите адрес почты:</label>
+                    <input id="email" type="email" placeholder="Введите почту" name="email">
+                </div>
+                <div>
+                    <legend>Откуда вы узнали о нас?</legend>
+                    <input id="friends" type="radio" name="about" value="friend" checked>
+                    <label for="friends" name="about">От друзей</label>
+                    <input id="spam" type="radio" name="about" value="other">
+                    <label for="spam" name="about">Из рассылок</label>
+                </div>
+                <div>
+                    <label class="label" for="complaint_or_offer">Категория обращения</label>
+                    <select name="complaint_or_offer" id="complaintID">
+                        <option id="firstComp" value="complaint">Жалоба</option>
+                        <option id="TwiceComp" value="offer">Предложение</option>
+                    </select>   
+                </div>
+                <div>
+                    <label class="label" for="textareaForm">Текст сообщения</label>
+                    <textarea name="textareaForm" id="textareaForm" rows="5"></textarea>
+                </div>
+                <div>
+                    <label class="label" for="fileInput">Вложения</label>
+                    <input type="file" id="fileInput" name="file">
+                </div>
+                <div>
+                    <input type="checkbox" id="checkbox">
+                    <label for="checkbox" name="checkbox">Даю согласие на обработку своих данных</label>
+                </div>
+                <button type="submit">Отправить</button> 
+            </div>
+        </form>    
+    </body>
+</html>    
