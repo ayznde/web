@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300..900&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="orders.css">
+        <link rel="stylesheet" href="print.css">
+        <title>Food Construct - История заказов</title>
+    </head>
+    <body>
+        <header>
+            <h1>Food Construct</h1>
+            <nav> 
+                <a href="index.html">Главная</a>
+                <a href="make_order.html">Собрать ланч</a>
+                <a href="order.html">Оформить заказ</a>
+                <a href="orders.html" class="active">Заказы</a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>История заказов</h2>
+            <div class="table-responsive">
+                <table class="orders-table">
+                    <thead>
+                        <tr>
+                            <th class="col-num">№</th>
+                            <th class="col-date">Дата оформления</th>
+                            <th class="col-composition">Состав заказа</th>
+                            <th class="col-price">Стоимость</th>
+                            <th class="col-delivery">Время доставки</th>
+                            <th class="col-actions">Действия</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orders-table-body">
+                    </tbody>
+                </table>
+            </div>
+            <div id="no-orders-msg" class="no-orders-msg hidden">
+                Заказов пока нет. Чтобы сделать заказ, перейдите на страницу <a href="make_order.html">Собрать ланч</a>.
+            </div>
+        </main>
+
+        <!-- View order modal -->
+        <div id="view-order-modal" class="modal-backdrop hidden">
+            <div class="modal-dialog">
+                <div class="modal-header">
+                    <h3>Просмотр заказа</h3>
+                    <button type="button" class="modal-close" id="view-modal-close-btn" aria-label="Закрыть">&times;</button>
+                </div>
+                <div class="modal-body" id="view-modal-content">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal btn-ok" id="view-modal-ok-btn">Ок</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edit order modal -->
+        <div id="edit-order-modal" class="modal-backdrop hidden">
+            <div class="modal-dialog">
+                <div class="modal-header">
+                    <h3>Редактирование заказа</h3>
+                    <button type="button" class="modal-close" id="edit-modal-close-btn" aria-label="Закрыть">&times;</button>
+                </div>
+                <form id="edit-order-form">
+                    <div class="modal-body" id="edit-modal-content">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-modal btn-cancel" id="edit-modal-cancel-btn">Отмена</button>
+                        <button type="submit" class="btn-modal btn-save" id="edit-modal-save-btn">Сохранить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Delete confirmation modal -->
+        <div id="delete-order-modal" class="modal-backdrop hidden">
+            <div class="modal-dialog">
+                <div class="modal-header">
+                    <h3>Удаление заказа</h3>
+                    <button type="button" class="modal-close" id="delete-modal-close-btn" aria-label="Закрыть">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p class="delete-prompt">Вы уверены, что хотите удалить заказ?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-modal btn-cancel" id="delete-modal-cancel-btn">Отмена</button>
+                    <button type="button" class="btn-modal btn-delete" id="delete-modal-confirm-btn">Да</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="notification-container" class="notification-container"></div>
+
+        <footer>
+            <p id="contact">Позвонить нам +7 921-000-00-00</p>
+        </footer>
+
+        <script src="dishes.js"></script>
+        <script src="orders.js"></script>
+    </body>
+</html>

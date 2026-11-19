@@ -1,0 +1,407 @@
+/* Orders page styles */
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.orders-table th, 
+.orders-table td {
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 16px 12px;
+    vertical-align: middle;
+}
+
+.orders-table th {
+    font-weight: 600;
+    font-size: 15px;
+    color: #111;
+}
+
+.orders-table td {
+    font-size: 14px;
+    color: #222;
+}
+
+.orders-table th.col-num,
+.orders-table td.col-num {
+    text-align: center;
+    width: 45px;
+}
+
+.orders-table th.col-date,
+.orders-table td.col-date {
+    white-space: nowrap;
+    width: 150px;
+}
+
+.orders-table th.col-composition,
+.orders-table td.col-composition {
+    text-align: left;
+}
+
+.orders-table th.col-price,
+.orders-table td.col-price {
+    text-align: center;
+    white-space: nowrap;
+    width: 110px;
+}
+
+.orders-table th.col-delivery,
+.orders-table td.col-delivery {
+    text-align: center;
+    width: 220px;
+}
+
+.orders-table th.col-actions,
+.orders-table td.col-actions {
+    text-align: center;
+    white-space: nowrap;
+    width: 120px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    margin: 0 3px;
+    border-radius: 4px;
+    color: #444;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.action-btn:hover {
+    color: #000;
+    background-color: #f2f2f2;
+}
+
+.action-btn svg {
+    display: block;
+}
+
+/* Modals */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-dialog {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 580px;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    padding: 25px 30px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    color: #666;
+    padding: 0;
+}
+
+.modal-close:hover {
+    color: #000;
+}
+
+.modal-section-title {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 18px 0 10px 0;
+}
+
+.modal-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 15px;
+    margin-bottom: 10px;
+    align-items: start;
+    font-size: 14px;
+}
+
+.modal-row .label {
+    color: #222;
+    font-weight: 400;
+}
+
+.modal-row .value {
+    color: #111;
+}
+
+.modal-dishes {
+    margin-top: 5px;
+}
+
+.modal-dish-item {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 15px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.modal-dish-item .dish-cat {
+    color: #222;
+}
+
+.modal-dish-item .dish-desc {
+    color: #111;
+}
+
+.modal-total {
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+/* Edit form elements */
+.form-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 15px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.form-row label {
+    font-size: 14px;
+    color: #222;
+}
+
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="tel"],
+.form-row input[type="time"] {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.form-row textarea {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid #888;
+    border-radius: 4px;
+    font-size: 14px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.form-row .radio-options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-row .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Modal footers */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+    padding-top: 15px;
+}
+
+.btn-modal {
+    padding: 8px 26px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.15s, opacity 0.15s;
+}
+
+.btn-cancel {
+    background-color: #ededed;
+    color: #111;
+}
+
+.btn-cancel:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-ok {
+    background-color: #ededed;
+    color: #111;
+}
+
+.btn-ok:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-save {
+    background-color: #2e7d32;
+    color: #ffffff;
+}
+
+.btn-save:hover {
+    background-color: #256628;
+}
+
+.btn-delete {
+    background-color: #b71c1c;
+    color: #ffffff;
+}
+
+.btn-delete:hover {
+    background-color: #931717;
+}
+
+/* Notifications */
+.notification-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 420px;
+    width: calc(100% - 40px);
+    pointer-events: none;
+}
+
+.notification-toast {
+    pointer-events: auto;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 14px 18px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-left: 5px solid #2e7d32;
+    animation: toast-in 0.25s ease-out;
+}
+
+.notification-toast.error {
+    border-left-color: #b71c1c;
+}
+
+.notification-toast p {
+    margin: 0;
+    font-size: 14px;
+    color: #111;
+    line-height: 1.4;
+}
+
+.notification-toast .toast-close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    color: #777;
+    padding: 0;
+}
+
+.notification-toast .toast-close:hover {
+    color: #000;
+}
+
+@keyframes toast-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.no-orders-msg {
+    margin: 30px 0;
+    font-size: 16px;
+}
+
+.no-orders-msg a {
+    color: tomato;
+}
+
+.comment-text {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: #111;
+}
+
+.empty-dishes-text {
+    color: #777;
+}
+
+.delete-prompt {
+    font-size: 15px;
+    margin: 10px 0 20px 0;
+}
+
+@media (max-width: 768px) {
+    .modal-row,
+    .form-row,
+    .modal-dish-item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+    }
+
+    .modal-dialog {
+        padding: 20px;
+    }
+}
